@@ -22,7 +22,7 @@ This repository contains a responsive web application designed to detect and hel
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/sunstroke-detection-avoidance.git
+   https://github.com/NinadWalke/SunStrokeDetectionAndAvoidance.git
    ```
 2. Navigate to the project directory:
     ```bash
