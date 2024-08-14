@@ -14,8 +14,8 @@ function Footer() {
       >
         <div className="container pt-5 pb-5">
           <div className="row">
-            <div className="col pe-5">
-              <h1>The agency for impatient brands</h1>
+            <div className="col pe-5 mt-4">
+              <h1>Your safety, our concern</h1>
             </div>
             <div className="col">
               <p>THANE</p>
@@ -44,9 +44,8 @@ function Footer() {
                 </p>
             </div>
             <div className="col ms-5">
-              <p>CONTACT US</p>
+              <p>RANDOM FOOTER TITLE</p>
               <p style={{lineHeight: "2.3"}}>
-                Email
                 Random Footer 1<br/>
                 Random Footer 2<br/>
                 Random Footer 3
