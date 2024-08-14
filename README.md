@@ -1,4 +1,4 @@
-# 🌞 Sunstroke Detection and Avoidance
+# 🌞 Sunstroke Protection and Avoidance
 
 ## 📝 Overview
 
