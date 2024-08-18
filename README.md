@@ -26,7 +26,7 @@ This repository contains a responsive web application designed to detect and hel
    ```
 2. Navigate to the project directory:
     ```bash
-    cd sunstroke-detection-avoidance
+    cd frontend
     ```
 3. Install dependencies:
    ```bash
