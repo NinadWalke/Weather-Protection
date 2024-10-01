@@ -10,14 +10,11 @@ import JoinUs from './JoinUs';
 function HomePage() {
     return ( 
         <>
-            <h1>Home</h1>
             <HomeHero/>
-            <div className="container">
                 <Offers/>
                 <Importance/>
                 <Statistics/>
                 <JoinUs/>
-            </div>
         </>
      );
 }

@@ -1,3 +1,7 @@
 #root {
     font-family: Montserrat, sans-serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
+a {
+    text-decoration: none;
+}
