@@ -13,7 +13,7 @@ import HealthPage from './landing_page/health/HealthPage.jsx'
 import HomePage from './landing_page/home/HomePage.jsx'
 import LoginPage from './landing_page/login/LoginPage.jsx'
 import SignUpPage from './landing_page/signup/SignUpPage.jsx'
-import StrokeInfoPage from './landing_page/stroke_info/StrokeInfoPage.jsx'
+import StrokeInfoPage from './landing_page/strokes/StrokeInfoPage.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>

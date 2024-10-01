@@ -5,7 +5,7 @@ function ImageCard({cardImg = "/media/errorcardimg.jpg", cardTitle = "Offer", ca
   return (
     <>
       <Link to={cardLink}>
-        <div className="card" style={{ width: "18rem", height: "300px"}}>
+        <div className="card" style={{ width: "20rem", height: "375px"}}>
           <img src={cardImg} class="card-img-top" alt="Oops! Error occured..." />
           <div class="card-body">
             <h5>{cardTitle}</h5>
