@@ -13,7 +13,7 @@ function JoinUs() {
                     <div className="col">
                         <h1 className='mb-4'>Title</h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, nihil, labore eligendi eveniet itaque saepe ducimus nostrum sequi aspernatur deleniti voluptates quo dolores, quaerat assumenda facere temporibus quidem suscipit possimus!</p>
-                            <Link to={"/signup"}><button className='btn btn-primary mt-3' style={{width: "250px", height: "50px"}}>Join Us</button></Link>
+                            <Link to={"/register"}><button className='btn btn-primary mt-3' style={{width: "250px", height: "50px"}}>Join Us</button></Link>
                         </div>
                 </div>
             </div>

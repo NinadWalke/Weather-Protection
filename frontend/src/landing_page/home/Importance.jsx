@@ -3,7 +3,7 @@ import React from 'react';
 function Importance() {
     return ( 
         <>
-            <h1 className='text-center mt-5 mb-5 pb-5 pt-5' style={{fontSize: "3rem"}}>Importance</h1>
+            <h1 className='text-center mt-5 mb-5 pb-5 pt-5' style={{fontSize: "3rem"}}>IMPORTANCE</h1>
             <div className="container mb-5 pb-5">
                 <div className="row mt-5 pt-5 pb-5">
                     <div className="col">
