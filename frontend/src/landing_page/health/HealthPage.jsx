@@ -4,7 +4,6 @@ import React from 'react';
 import HealthHero from './HealthHero';
 import StrokeDefense from './StrokeDefense';
 import StrokeDiet from './StrokeDiet';
-import ResearchCredits from './ResearchCredits';
 
 function HealthPage() {
     return ( 
@@ -12,7 +11,6 @@ function HealthPage() {
             <HealthHero/>
             <StrokeDefense/>
             <StrokeDiet/>
-            <ResearchCredits/>
         </>
      );
 }
