@@ -11,8 +11,8 @@ import Footer from "./landing_page/Footer.jsx";
 import AboutUsPage from './landing_page/about_us/AboutUsPage.jsx';
 import HealthPage from './landing_page/health/HealthPage.jsx'
 import HomePage from './landing_page/home/HomePage.jsx'
-import LoginPage from './landing_page/login/LoginPage.jsx'
-import SignUpPage from './landing_page/signup/SignUpPage.jsx'
+import LoginPage from './authentication_pages/login/LoginPage.jsx'
+import SignUpPage from './authentication_pages/signup/SignUpPage.jsx'
 import StrokeInfoPage from './landing_page/strokes/StrokeInfoPage.jsx'
 
 createRoot(document.getElementById('root')).render(

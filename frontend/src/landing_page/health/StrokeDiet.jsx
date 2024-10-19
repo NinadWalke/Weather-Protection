@@ -3,7 +3,7 @@ import React from 'react';
 function StrokeDiet() {
     return ( 
         <>
-            <div className="container mt-5">
+            <div className="container mt-5 mb-5 pb-5">
                 <h1 className="text-center">DIETARY ADVICE</h1>
                 <div className="row mt-5">
                     <div className="col">
