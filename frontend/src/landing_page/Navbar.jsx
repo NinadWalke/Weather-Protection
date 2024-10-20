@@ -7,7 +7,7 @@ function Navbar() {
     <>
       <nav class="navbar navbar-expand-lg p-4 pb-4">
         <div class="container-fluid text-center">
-          <Link class="navbar-brand text-center ms-5 ps-5" to="/">
+          <Link class="navbar-brand text-center ms-5 ps-5" to="/home">
             <img
               src="./media/templogo.png"
               alt="Temp_Sun_Logo"

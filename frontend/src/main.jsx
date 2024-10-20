@@ -19,10 +19,16 @@ import SignUpPage from './authentication_pages/signup/SignUpPage.jsx'
 
 // Dashboard Page Imports
 import Dashboard from './dashboard/dashboard_landing/Dashboard.jsx';
-import DashNav from './dashboard/dashboard_landing/DashNav.jsx';
+import DashNav from './dashboard/DashNav.jsx';
+
 import Blogs from './dashboard/informational_blogs/Blogs.jsx';
+import PostABlog from './dashboard/informational_blogs/PostABlog.jsx';
+import ShowBlog from './dashboard/informational_blogs/ShowBlog.jsx';
+
 import Analyzer from './dashboard/symptoms_analyzer/Analyzer.jsx';
+
 import Weather from './dashboard/weather_tracking/Weather.jsx';
+
 
 // Not found page
 import NotFound from './landing_page/NotFound.jsx';
@@ -46,9 +52,14 @@ const Main = () => {
 
         {/* Dashboard routes */}
         <Route path='/dashboard' element={<Dashboard />} />  {/* Dashboard route */}
+
         <Route path='/dashboard/weather' element={<Weather />} />
+
         <Route path='/dashboard/analyzer' element={<Analyzer />} />
+
         <Route path='/dashboard/blogs' element={<Blogs />} />
+        <Route path='/dashboard/postblog' element={<PostABlog/>}/>
+        <Route path='/dashboard/blogs/:id' element={<ShowBlog/>}/>
 
         {/* Not found route */}
         <Route path='*' element={<NotFound/>}></Route>
