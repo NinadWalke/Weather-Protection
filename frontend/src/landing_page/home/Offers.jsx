@@ -18,8 +18,8 @@ function Offers() {
             cardData=""
             cardLink=""
         */}
-        <ImageCard  cardImg = "media/weather app.png" cardTitle="Weather App" cardData = "Stay updated with real-time weather data to monitor conditions and stay safe."/>
-        <ImageCard cardImg = "media/alert.png" cardTitle="Symptoms / Alerts" cardData = "Get notified about common sunstroke symptoms and timely alerts to prevent risk." />
+        <ImageCard  cardImg = "media/weather app.png" cardTitle="Weather Alerts" cardData = "Stay updated with real-time weather data to monitor conditions and stay safe."/>
+        <ImageCard cardImg = "media/alert.png" cardTitle="Symptoms" cardData = "Get notified about common sunstroke symptoms and timely alerts to prevent risk." />
         <ImageCard cardImg = "media/blog.png" cardTitle="Sunstroke Prevention Blogs" cardData = "Explore expert advice and tips on preventing and avoiding sunstroke."/>
       </div>
       <div className="container text-center">

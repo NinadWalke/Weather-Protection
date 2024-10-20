@@ -1,11 +1,12 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
 // Importing form styling
 import "../forms.css";
 
 function LoginPage() {
-    return ( 
-        <>
+  return (
+    <>
       <div className="container-fluid form-cont">
         <div
           className="container"
@@ -29,15 +30,19 @@ function LoginPage() {
                       placeholder="Password"
                     />
                     <br />
-                    <button
-                      className="btn btn-primary mb-4"
-                      style={{ width: "375px" }}
-                    >
-                      Log In
-                    </button>
+                    <Link to={"/dashboard"}>
+                      <button
+                        className="btn btn-primary mb-4"
+                        style={{ width: "375px" }}
+                      >
+                        Log In
+                      </button>
+                    </Link>
                     <p className="text-muted">
                       Don't have an account?{" "}
-                      <a href="/register"><span style={{ color: "#0A58CA" }}>Sign Up!</span></a>
+                      <Link to={"/register"}>
+                        <span style={{ color: "#0A58CA" }}>Sign Up!</span>
+                      </Link>
                     </p>
                   </form>
                 </div>
@@ -47,7 +52,7 @@ function LoginPage() {
         </div>
       </div>
     </>
-    );
+  );
 }
 
 export default LoginPage;

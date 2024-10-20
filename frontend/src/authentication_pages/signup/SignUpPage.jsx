@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 // Importing form styling
 import "../forms.css";
@@ -42,7 +43,7 @@ function SignUpPage() {
                     </button>
                     <p className="text-muted">
                       Already have an account?{" "}
-                      <a href="/login"><span style={{ color: "#0A58CA" }}>Log In</span></a>
+                      <Link to={"/login"}><span style={{ color: "#0A58CA" }}>Log In</span></Link>
                     </p>
                   </form>
                 </div>
