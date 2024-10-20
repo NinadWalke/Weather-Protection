@@ -31,7 +31,7 @@ function Navbar() {
               style={{ fontFamily: "Montserrat", fontWeight: "500" }}
             >
               <li class="nav-item" style={{ width: "150px" }}>
-                <Link class="nav-link active" to="/">
+                <Link class="nav-link active" to="/home">
                   Home
                 </Link>
               </li>

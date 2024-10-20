@@ -24,6 +24,9 @@ import Blogs from './dashboard/informational_blogs/Blogs.jsx';
 import Analyzer from './dashboard/symptoms_analyzer/Analyzer.jsx';
 import Weather from './dashboard/weather_tracking/Weather.jsx';
 
+// Not found page
+import NotFound from './landing_page/NotFound.jsx';
+
 const Main = () => {
   const location = useLocation();  // Get the current location (path)
 
@@ -34,7 +37,7 @@ const Main = () => {
 
       <Routes>
         {/* Landing Page Routes */}
-        <Route path='/' element={<HomePage />} />
+        <Route path='/home' element={<HomePage />} />
         <Route path='/health' element={<HealthPage />} />
         <Route path='/strokes' element={<StrokeInfoPage />} />
         <Route path='/about' element={<AboutUsPage />} />
@@ -46,6 +49,9 @@ const Main = () => {
         <Route path='/dashboard/weather' element={<Weather />} />
         <Route path='/dashboard/analyzer' element={<Analyzer />} />
         <Route path='/dashboard/blogs' element={<Blogs />} />
+
+        {/* Not found route */}
+        <Route path='*' element={<NotFound/>}></Route>
       </Routes>
       <Footer />
     </div>
