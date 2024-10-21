@@ -1,8 +1,9 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 // Data imports
-import countermeasures from './data/countermeasures.js';
-import dietarySuggestions from './data/dietarySuggestions.js';
+import countermeasures from "./data/countermeasures.js";
+import dietarySuggestions from "./data/dietarySuggestions.js";
+import symptomImages from "./data/symptomimages.js";
 
 function AnalyzerFunction() {
   const [selectedOption, setSelectedOption] = useState("");
@@ -44,14 +45,24 @@ function AnalyzerFunction() {
         <option value="fainting">Fainting</option>
         <option value="high_body_temperature">High Body Temperature</option>
         <option value="fatigue">Fatigue</option>
-        <option value="thirst">Increased Thirst</option>
+        <option value="increased_thirst">Increased Thirst</option>
+        <option value="heat_rash">Heat Rash</option>
       </select>
       {selectedOption && (
         <div className=" mb-5">
+          <div className="symptom-image-container mb-5" style={{width: "100%", display: "flex", justifyContent: "center"}}>
+            <img
+              src={symptomImages[selectedOption]}
+              alt={selectedOption}
+              style={{ width: "60%", height: "auto" }}
+            />
+          </div>
+
           <h3>Countermeasure:</h3>
           <p className="mb-5">{countermeasures[selectedOption]}</p>
           <h3>Dietary Advice: </h3>
-          <p style={{lineHeight: "2"}}
+          <p
+            style={{ lineHeight: "2" }}
             dangerouslySetInnerHTML={{
               __html: dietarySuggestions[selectedOption].replace(
                 /\n/g,
