@@ -144,7 +144,7 @@ export default function InfoBox({ info }) {
                   <h1 className="mb-4">Suggestions based on the weather</h1>
                   <div
                     className="mb-5"
-                    dangerouslySetInnerHTML={{ __html: precautions.highTemp }}
+                    dangerouslySetInnerHTML={{ __html: precautions.safeTemp }}
                   />
                 </div>
               ) : info.humidity > 80 ? (
@@ -160,7 +160,7 @@ export default function InfoBox({ info }) {
                   <h1 className="mb-4">Suggestions based on the weather</h1>
                   <div
                     className="mb-5"
-                    dangerouslySetInnerHTML={{ __html: precautions.highTemp }}
+                    dangerouslySetInnerHTML={{ __html: precautions.rainyWeather }}
                   />
                 </div>
               ) : (
@@ -176,7 +176,7 @@ export default function InfoBox({ info }) {
                   <h1 className="mb-4">Suggestions based on the weather</h1>
                   <div
                     className="mb-5"
-                    dangerouslySetInnerHTML={{ __html: precautions.highTemp }}
+                    dangerouslySetInnerHTML={{ __html: precautions.lowTemp }}
                   />
                 </div>
               )}
