@@ -1,9 +1,11 @@
 import React from 'react';
 
+import WeatherApp from './WeatherApp.jsx';
+
 function Weather() {
     return ( 
         <>
-            <h1>Weather</h1>
+            <WeatherApp/>
         </>
      );
 }
