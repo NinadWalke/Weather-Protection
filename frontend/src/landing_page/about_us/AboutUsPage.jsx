@@ -9,7 +9,7 @@ import Guidance from './Guidance';
 function AboutUsPage() {
     return ( 
         <>
-            <h1>About Us</h1>
+            <h4 className='text-center mt-4 mb-4'>ABOUT</h4>
             <Collaborators/>
             <Motivation/>
             <Guidance/>

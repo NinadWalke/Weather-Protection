@@ -4,8 +4,8 @@ function Symptoms() {
   return (
     <>
       <div className="container mt-5">
-        <h1 style={{ fontSize: "3rem" }} className="mb-5 text-center">
-          Symptoms of a Sun Stroke
+        <h1 style={{ fontSize: "3rem" }}  className="text-center mb-5" >
+          SYMPTOMS
         </h1>
         <p className="text-center">
             <h3>1) High body temperature (above 104°F or 40°C)</h3>

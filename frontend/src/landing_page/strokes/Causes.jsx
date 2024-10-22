@@ -8,8 +8,8 @@ function Causes() {
   return (
     <>
       <div className="container mt-5">
-        <h1 style={{ fontSize: "3rem" }} className="mb-5">
-          Common causes of Sun Strokes
+        <h1 className="text-center mb-5" style={{ fontSize: "3rem" }}>
+          CAUSES
         </h1>
         <div className="row">
           <div className="col">

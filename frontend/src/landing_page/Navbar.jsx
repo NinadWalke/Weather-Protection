@@ -53,10 +53,10 @@ function Navbar() {
               <li class="nav-item ms-5" style={{ width: "150px" }}>
                 <Link
                   class="nav-link active btn btn-primary"
-                  to="/register"
+                  to="/login"
                   style={{ color: "white" }}
                 >
-                  Get started
+                  Login
                 </Link>
               </li>
             </ul>

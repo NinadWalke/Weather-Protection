@@ -5,12 +5,12 @@ function StrokeStatistics() {
     <>
       <div className="container mt-5 pt-5 mb-5 pb-5">
         <h1 style={{ fontSize: "3rem" }} className="mb-5 text-center">
-          Sun Stroke Statistics
+          STATISTICS
         </h1>
         <div className="row">
           <div
             style={{
-              backgroundImage: "url(/media/statisticsimg.jpg)",
+              backgroundImage: "url(/media/stats.png)",
               width: "100%",
               height: "650px",
               backgroundSize: "cover",

@@ -4,7 +4,7 @@ function SunStrokes() {
   return (
     <>
       <div className="container mt-5">
-        <h1 style={{ fontSize: "3rem" }}>What are Sun Strokes?</h1>
+        <h1 className="text-center mb-5" style={{ fontSize: "3rem" }}>SUN STROKES</h1>
         <div className="row">
           <div className="col">
             <p>
