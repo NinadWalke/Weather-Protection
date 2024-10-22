@@ -14,6 +14,7 @@ function Causes() {
         <div className="row">
           <div className="col">
             <LeftData
+              sectionImgUrl = "/media/cause1.png"
               sectionTitle="1. Prolonged Exposure to Direct Sunlight, Especially During Hot Weather"
               sectionData="Sunstroke often occurs when individuals are exposed to intense
               sunlight for extended periods without adequate protection.
@@ -26,6 +27,7 @@ function Causes() {
               experiencing heat-related illnesses, including sunstroke."
             />
             <RightData
+              sectionImgUrl = "/media/cause2.png"
               sectionTitle="2. High Humidity, Which Prevents Sweat from Evaporating
               Efficiently"
               sectionData="High humidity levels make it more difficult for the body to cool
@@ -38,6 +40,7 @@ function Causes() {
               cooling mechanisms become less effective in humid conditions."
             />
             <LeftData
+              sectionImgUrl = "/media/cause3.png"
               sectionTitle="3. Strenuous Physical Activity in Hot Weather"
               sectionData="Engaging in strenuous physical activities, such as sports or
               outdoor labor, during hot weather significantly increases the risk
@@ -51,6 +54,7 @@ function Causes() {
               outdoors."
             />
             <RightData
+              sectionImgUrl = "/media/cause4.png"
               sectionTitle="4. Dehydration, Reducing the Body's Ability to Cool Down"
               sectionData="Dehydration is a key factor that can lead to sunstroke, as it
               hampers the body's ability to regulate temperature. When you are
@@ -64,6 +68,7 @@ function Causes() {
               performance."
             />
             <LeftData
+              sectionImgUrl = "/media/cause5.png"
               sectionTitle="5. Wearing Tight or Non-Breathable Clothing in the Heat"
               sectionData="Wearing tight or non-breathable clothing in hot weather traps heat
               and prevents the skin from releasing it into the surrounding

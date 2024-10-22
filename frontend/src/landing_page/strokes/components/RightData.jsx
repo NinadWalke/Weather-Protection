@@ -20,7 +20,10 @@ function RightData({
               style={{
                 width: "550px",
                 height: "300px",
-                backgroundColor: "red",
+                backgroundImage :`url(${sectionImgUrl})`,
+                backgroundSize: "contain",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
               }}
             ></div>
           </div>
