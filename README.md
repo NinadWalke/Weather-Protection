@@ -1,4 +1,4 @@
-# 🌞 Sunstroke Protection and Avoidance
+# 🌞 Weather Protection Web Application
 
 ## 📝 Overview
 
