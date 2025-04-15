@@ -8,9 +8,8 @@
 }
 
 input {
-    width: 375px;
-    height: 35px;
-    border-radius: 0.25rem;
+    width: 94%;
+    height: 40px;
     border: none;
     outline: 1px solid lightgrey;
     padding-left: 1rem;

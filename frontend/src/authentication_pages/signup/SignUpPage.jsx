@@ -1,6 +1,6 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import axios from 'axios';
+import axios from "axios";
 
 // Importing form styling
 import "../forms.css";
@@ -10,69 +10,147 @@ function SignUpPage() {
   const [formData, setFormData] = useState({
     name: "",
     username: "",
-    password: ""
-  })
+    password: "",
+  });
+  // useState for show password
+  const [showEnabled, setShowEnabled] = useState(false);
+  const enableShow = () => setShowEnabled(!showEnabled);
+
   // Handling form change
   function handleChange(e) {
     setFormData((currData) => {
-      return {...currData, [e.target.name]: e.target.value};
-    })
+      return { ...currData, [e.target.name]: e.target.value };
+    });
   }
   // Handling signup
   function handleSignup(e) {
-    e.preventDefault();     // Prevent default submission behavior
-    axios.post("http://localhost:8080/signup", formData) // send form data
-    .then((res) => {
-      console.log("Successfully registered user!");
-    })
-    .catch((err) => {
-      console.log("Error while user registration!" + err);
-    })
+    e.preventDefault(); // Prevent default submission behavior
+    axios
+      .post("http://localhost:8080/signup", formData) // send form data
+      .then((res) => {
+        console.log("Successfully registered user!");
+      })
+      .catch((err) => {
+        console.log("Error while user registration!" + err);
+      });
   }
   return (
     <>
       <div className="container-fluid form-cont">
-        <div
-          className="container"
-          style={{ width: "100%", display: "flex", justifyContent: "center" }}
-        >
-          <div className="row">
-            <div className="col mt-5 mb-5 pt-5 pb-5">
-              <div class="card" style={{ width: "30rem" }}>
-                <div class="card-body text-center">
-                  <h2 class="card-title mt-3">Sign Up</h2>
-                  <p class="card-text text-muted mt-3">
-                    Let's get started with your registration!
-                  </p>
-                  <form onSubmit={handleSignup}>
+        <div className="row">
+          <div className="col-12 mt-3 mb-5 pt-5 pb-5 d-flex justify-content-center">
+            <div class="card" style={{ width: "40%" }}>
+              <div class="card-body">
+                <h2 class="card-title mt-3 text-center">Sign Up</h2>
+                <p class="card-text text-muted mt-3 text-center">
+                  Let's get started with your registration!
+                </p>
+                <form onSubmit={handleSignup}>
+                  <label className="mx-3" htmlFor="firstname">
+                    First Name
+                  </label>
+                  <input
+                    type="text"
+                    name="firstname"
+                    className="mt-3 mb-4 mx-3"
+                    placeholder="First Name"
+                    onChange={handleChange}
+                  />
+                  <label className="mx-3" htmlFor="lastname">
+                    Last Name
+                  </label>
+                  <input
+                    type="text"
+                    name="lastname"
+                    className="mt-3 mb-4 mx-3"
+                    placeholder="Last Name"
+                    onChange={handleChange}
+                  />
+                  <label className="mx-3" htmlFor="username">
+                    Username
+                  </label>
+                  <input
+                    type="text"
+                    name="username"
+                    className="mt-3 mb-4 mx-3"
+                    placeholder="Username"
+                    onChange={handleChange}
+                  />
+                  <label className="mx-3" htmlFor="email">
+                    Email
+                  </label>
+                  <input
+                    type="text"
+                    name="email"
+                    className="mt-3 mb-4 mx-3"
+                    placeholder="Email"
+                    onChange={handleChange}
+                  />
+                  <label htmlFor="password" className="mx-3">
+                    Password
+                  </label>
+                  <div className="position-relative d-flex align-items-center">
                     <input
-                     name="name"
-                      className="mt-3 mb-4"
-                      type="text"
-                      placeholder="Name"
-                    onChange={handleChange}/>
-                    <br />
-                    <input className="mb-4" name="username" type="text" placeholder="Username" onChange={handleChange}/>
-                    <br />
-                    <input
-                      className="mb-4"
-                      type="password"
-                      placeholder="Password"
+                      type={showEnabled ? "text" : "password"}
+                      className="mt-3 mb-4 mx-3"
                       name="password"
-                    onChange={handleChange}/>
-                    <br />
+                      placeholder="Password"
+                      onChange={handleChange}
+                    />
+                    {showEnabled ? (
+                      <i
+                        className="fa-solid fa-eye position-absolute end-0 top-50 translate-middle-y me-5"
+                        style={{ cursor: "pointer", fontSize: "19px" }}
+                        onClick={enableShow}
+                      ></i>
+                    ) : (
+                      <i
+                        class="fa-solid fa-eye-slash position-absolute end-0 top-50 translate-middle-y me-5"
+                        style={{ cursor: "pointer", fontSize: "19px" }}
+                        onClick={enableShow}
+                      ></i>
+                    )}
+                  </div>
+                  <label htmlFor="confpassword" className="mx-3">
+                    Confirm Password
+                  </label>
+                  <div className="position-relative d-flex align-items-center">
+                    <input
+                      type={showEnabled ? "text" : "password"}
+                      className="mt-3 mb-4 mx-3"
+                      name="confpassword"
+                      placeholder="Confirm Password"
+                      onChange={handleChange}
+                    />
+                    {showEnabled ? (
+                      <i
+                        className="fa-solid fa-eye position-absolute end-0 top-50 translate-middle-y me-5"
+                        style={{ cursor: "pointer", fontSize: "19px" }}
+                        onClick={enableShow}
+                      ></i>
+                    ) : (
+                      <i
+                        class="fa-solid fa-eye-slash position-absolute end-0 top-50 translate-middle-y me-5"
+                        style={{ cursor: "pointer", fontSize: "19px" }}
+                        onClick={enableShow}
+                      ></i>
+                    )}
+                  </div>
+                  <div className="btn-holder text-center">
                     <button
                       className="btn btn-primary mb-4"
                       style={{ width: "375px" }}
                     >
                       Sign Up
                     </button>
-                    <p className="text-muted">
-                      Already have an account?{" "}
-                      <Link to={"/login"}><span style={{ color: "#0A58CA" }}>Log In</span></Link>
-                    </p>
-                  </form>
-                </div>
+                  </div>
+                  <p className="text-muted text-center">
+                    Already have an account?{" "}
+                    <Link to={"/login"}>
+                      <span style={{ color: "#0A58CA" }}>Log In</span>
+                    </Link>
+                  </p>
+                </form>
               </div>
             </div>
           </div>

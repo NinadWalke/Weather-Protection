@@ -10,6 +10,10 @@ function LoginPage() {
     username: "",
     password: "",
   });
+  // Show Password functionality
+  const [showEnabled, setShowEnabled] = useState(false);
+  const enableShow = () => setShowEnabled(!showEnabled);
+
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate(); // React Router hook to navigate between pages
 
@@ -38,46 +42,72 @@ function LoginPage() {
   return (
     <>
       <div className="container-fluid form-cont">
-        <div className="container" style={{ width: "100%", display: "flex", justifyContent: "center" }}>
-          <div className="row">
-            <div className="col mt-5 mb-5 pt-5 pb-5">
-              <div className="card" style={{ width: "30rem" }}>
-                <div className="card-body text-center">
-                  <h2 className="card-title mt-3">Log In</h2>
-                  <p className="card-text text-muted mt-3">Welcome back! Ready to safeguard yourself?</p>
-                  
-                  {/* Error message */}
-                  {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
+        <div className="row">
+          <div className="col-12 mt-5 mb-5 pt-5 pb-5 d-flex justify-content-center">
+            <div className="card" style={{ width: "40%" }}>
+              <div className="card-body">
+                <h2 className="card-title mt-3 text-center">Log In</h2>
+                <p className="card-text text-muted mt-3 text-center">
+                  Welcome back! Ready to safeguard yourself?
+                </p>
 
-                  <form onSubmit={handleLogin}>
-                    <input 
-                      className="mb-4" 
-                      type="text" 
-                      name="username" 
-                      placeholder="Username" 
-                      onChange={handleChange} 
+                {/* Error message */}
+                {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
+
+                <form onSubmit={handleLogin}>
+                  <label htmlFor="username" className="mb-3 mx-3">
+                    Username
+                  </label>
+                  <br />
+                  <input
+                    className="mb-4 mx-3"
+                    type="text"
+                    name="username"
+                    placeholder="Username"
+                    onChange={handleChange}
+                  />
+                  <br />
+                  <label htmlFor="password" className="mb-3 mx-3">
+                    Password
+                  </label>
+                  <div className="position-relative d-flex align-items-center">
+                    <input
+                      type={showEnabled ? "text" : "password"}
+                      className="signup-input mx-3"
+                      name="password"
+                      placeholder="Password"
+                      onChange={handleChange}
                     />
-                    <br />
-                    <input 
-                      className="mb-4" 
-                      type="password" 
-                      name="password" 
-                      placeholder="Password" 
-                      onChange={handleChange} 
-                    />
-                    <br />
-                    <button className="btn btn-primary mb-4" style={{ width: "375px" }}>
+                    {showEnabled ? (
+                      <i
+                        className="fa-solid fa-eye position-absolute end-0 top-50 translate-middle-y me-5"
+                        style={{ cursor: "pointer", fontSize: "19px"}}
+                        onClick={enableShow}
+                      ></i>
+                    ) : (
+                      <i
+                        class="fa-solid fa-eye-slash position-absolute end-0 top-50 translate-middle-y me-5"
+                        style={{ cursor: "pointer", fontSize: "19px"}}
+                        onClick={enableShow}
+                      ></i>
+                    )}
+                  </div>
+                  <br />
+                  <div className="btn-holder text-center">
+                    <button
+                      className="btn btn-primary mb-4"
+                      style={{ width: "375px" }}
+                    >
                       Log In
                     </button>
-                  </form>
-
-                  <p className="text-muted">
-                    Don't have an account?{" "}
-                    <a href="/register">
-                      <span style={{ color: "#0A58CA" }}>Sign Up!</span>
-                    </a>
-                  </p>
-                </div>
+                  </div>
+                </form>
+                <p className="text-muted text-center">
+                  Don't have an account?{" "}
+                  <a href="/register">
+                    <span style={{ color: "#0A58CA" }}>Sign Up!</span>
+                  </a>
+                </p>
               </div>
             </div>
           </div>
