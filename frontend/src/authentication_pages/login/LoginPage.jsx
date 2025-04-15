@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import {toast} from "react-toastify";
 import axios from "axios";
 
 // Importing form styling
@@ -13,8 +14,6 @@ function LoginPage() {
   // Show Password functionality
   const [showEnabled, setShowEnabled] = useState(false);
   const enableShow = () => setShowEnabled(!showEnabled);
-
-  const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate(); // React Router hook to navigate between pages
 
   // Handling form input change
@@ -32,11 +31,19 @@ function LoginPage() {
       const res = await axios.post("http://localhost:8080/login", formData); // Send login request to backend
       if (res.status === 200) {
         // If login is successful, redirect to the dashboard
+        toast.success(res.data.message, {
+          position: "top-right",
+          autoClose: "3000",
+        });
         navigate("/dashboard");
       }
     } catch (err) {
       // If there is an error (invalid credentials), show an error message
-      setErrorMessage("Invalid username or password");
+        toast.error("Error logging user in!", {
+          position: "top-right",
+          autoClose: "3000",
+        });
+        navigate("/login");
     }
   }
   return (
@@ -50,10 +57,6 @@ function LoginPage() {
                 <p className="card-text text-muted mt-3 text-center">
                   Welcome back! Ready to safeguard yourself?
                 </p>
-
-                {/* Error message */}
-                {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
-
                 <form onSubmit={handleLogin}>
                   <label htmlFor="username" className="mb-3 mx-3">
                     Username

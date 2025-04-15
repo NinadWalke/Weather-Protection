@@ -6,6 +6,7 @@ import {BrowserRouter, Routes, Route, useLocation} from "react-router-dom";
 // Common/Redundant Imports 
 import Navbar from "./landing_page/Navbar.jsx";
 import Footer from "./landing_page/Footer.jsx";
+import {ToastContainer} from 'react-toastify';
 
 // Landing Page Imports
 import AboutUsPage from './landing_page/about_us/AboutUsPage.jsx';
@@ -40,7 +41,7 @@ const Main = () => {
     <div>
       {/* Conditionally rendering the navbar */}
       {location.pathname.startsWith('/dashboard') ? <DashNav /> : <Navbar />}
-
+      <ToastContainer/>
       <Routes>
         {/* Landing Page Routes */}
         <Route path='/home' element={<HomePage />} />

@@ -1,16 +1,22 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
+import {toast} from "react-toastify"
 import axios from "axios";
 
 // Importing form styling
 import "../forms.css";
 
 function SignUpPage() {
+  const navigate = useNavigate();
   // UseState for the form data
   const [formData, setFormData] = useState({
-    name: "",
+    firstname: "",
+    lastname: "",
     username: "",
+    email: "",
+    gender: "",
     password: "",
+    confpassword: ""
   });
   // useState for show password
   const [showEnabled, setShowEnabled] = useState(false);
@@ -29,9 +35,30 @@ function SignUpPage() {
       .post("http://localhost:8080/signup", formData) // send form data
       .then((res) => {
         console.log("Successfully registered user!");
+        toast.success(res.data.message, {
+          position: "top-right",
+          autoClose: "3000",
+        });
+        // Reset form data after success
+        setFormData({
+          firstname: "",
+          lastname: "",
+          email: "",
+          username: "",
+          password: "",
+          confPassword: "",
+          dob: "",
+          gender: "",
+        });
+        navigate("/login");
       })
       .catch((err) => {
         console.log("Error while user registration!" + err);
+        toast.error("Error registering user!", {
+          position: "top-right",
+          autoClose: "3000",
+        });
+        navigate("/register");
       });
   }
   return (
@@ -76,6 +103,62 @@ function SignUpPage() {
                     placeholder="Username"
                     onChange={handleChange}
                   />
+                  <div className="row">
+                  <div className="col">
+                  <label htmlFor="dob" className="mx-3">
+                    Date of Birth
+                  </label>
+                  <input
+                    type="date"
+                    className="mx-3 mt-3 mb-4"
+                    name="dob"
+                    onChange={handleChange}
+                    value={formData.dob}
+                    required
+                    style={{height: "3rem", padding: "1rem"}}
+                  />
+                </div>
+                <div className="col">
+                  <label htmlFor="gender" className="signup-label">
+                    Gender
+                  </label>
+                  <br />
+                  <select
+                    name="gender"
+                    id="gender"
+                    style={{
+                      width: "92%",
+                      height: "50px",
+                      marginTop: "1rem",
+                      paddingLeft: "1rem",
+                      background: "none",
+                      border: "1px solid lightgrey"
+                    }}
+                    onChange={handleChange}
+                    value={formData.gender}
+                    required
+                  >
+                    <option value="" disabled>
+                      Select gender
+                    </option>
+                    <option value="Male" style={{ color: "black" }}>
+                      Male
+                    </option>
+                    <option value="Female" style={{ color: "black" }}>
+                      Female
+                    </option>
+                    <option value="Other" style={{ color: "black" }}>
+                      Other
+                    </option>
+                    <option
+                      value="N/A"
+                      style={{ color: "black" }}
+                    >
+                      Prefer not to say
+                    </option>
+                  </select>
+                </div>
+              </div>
                   <label className="mx-3" htmlFor="email">
                     Email
                   </label>
