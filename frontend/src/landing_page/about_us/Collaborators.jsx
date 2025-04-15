@@ -5,7 +5,7 @@ import CollabCard from "./components/CollabCard";
 const descriptions = [
   "Hi, I am Ninad, a Full Stack Web Developer, who is orientied in backend based development. I've also worked with Java in the past and I'm currently a C++ DSA student.",
   "Hi, I am Shweta, a passionate full stack web developer with proficiency in Python. My expertise spans across the MERN stack and Django, enabling me to build dynamic and robust web applications. ",
-  "Hi, I am Aarya, a full stack web developer with a keen interest in Cybersecurity and Networking. Additionally I offer my experience as a freelance Web Developer, helping clients bring their digital vision to life.",
+  "Hi, I am Sakshi, a full stack developer with a growing interest in Java. On the frontend, I work with HTML and CSS to build responsive and user-friendly web applications. I am passionate about developing scalable solutions and continuously expanding my knowledge in full stack development.",
 ];
 function Collaborators() {
   return (
@@ -23,15 +23,15 @@ function Collaborators() {
               }}
             >
               <CollabCard
-                img="/media/melol.png"
+                img="/media/ninad.jpg"
                 name="Ninad Walke"
                 title="MERN Stack Developer"
                 desc={descriptions[0]}
               />
               <CollabCard
-                img="/media/dumboo.jpg"
-                name="Aarya Walve"
-                title="MERN Stack Developer"
+                img="/media/sakshi.jpg"
+                name="Sakshi Nikum"
+                title="Full Stack Java Developer"
                 desc={descriptions[2]}
               />
               <CollabCard
