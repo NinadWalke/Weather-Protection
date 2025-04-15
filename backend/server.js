@@ -49,6 +49,12 @@ const port = 8080;
 
 // Server settings here
 app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:5173", // frontend origin
+    credentials: true, // 👈 Allow cookies to be sent
+  })
+);
 app.use(bodyParser.json()); // Since we're working with JSON, bodyParser.json
 app.use(session(sessionOptions)); // Using sessions
 app.use(passport.initialize());
@@ -100,6 +106,32 @@ app.post("/login", async (req, res) => {
       res.status(200).json({ message: "Login successful!", user });
     }
   );
+});
+
+// Blogs route
+app.post("/blog/post", async (req, res) => {
+  if(req.isAuthenticated()) {
+    console.log("Authenticated");
+  }
+  const user = req.user;
+  console.log(user);
+  // If user is invalid
+  if (!user) {
+    return res.status(401).json({ error: "Not authenticated" });
+  }
+  const { blogTitle, blogSummary, blogBody } = req.body;
+  // If blog data is missing
+  if (!blogTitle || !blogSummary || !blogBody) {
+    return res.status(400).json({ error: "Missing blog fields" });
+  }
+  // Push blog
+  try {
+    user.blogs.push({ blogTitle, blogSummary, blogBody });
+    await user.save();
+    res.status(200).json({ message: "Blog added", blogs: user.blogs });
+  } catch (err) {
+    res.status(500).json({ error: "Error saving blog" });
+  }
 });
 
 app.get("/", (req, res) => {

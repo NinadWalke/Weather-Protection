@@ -27,7 +27,23 @@ const userSchema = new Schema({
       gender: {
         type: String,
         required: true
-      }
+      },
+      blogs: [
+        {
+          blogTitle: {
+            type: String,
+            required: true
+          },
+          blogSummary: {
+            type: String, 
+            required: true
+          },
+          blogBody: {
+            type: String,
+            required: true
+          }
+        }
+      ]
     // Passport-local-mongoose defines username and password by itself.
 });
 

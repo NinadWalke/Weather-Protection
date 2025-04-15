@@ -1,26 +1,135 @@
 import React from "react";
-import {Link} from 'react-router-dom'
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
-import './PostABlog.css';
+import "./PostABlog.css";
 
 function PostABlog() {
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    title: "",
+    summary: "",
+    content: "",
+    // images: [],
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+  const handleFileChange = (e) => {
+    const files = Array.from(e.target.files);
+    setFormData((prev) => ({
+      ...prev,
+      images: files,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // Submit logic here (you could POST to your backend API)
+    console.log("Posting blog:", formData);
+    try {
+      const res = await axios.post("http://localhost:8080/blog/post", formData, {withCredentials: true});
+      if (res.status == 200) {
+        toast.success(res.data.message, {
+          position: "top-right",
+          autoClose: "3000",
+        });
+        navigate("/dashboard/postblog"); // replace with actual route
+      }
+    } catch (e) {
+      toast.error("Error logging user in!", {
+        position: "top-right",
+        autoClose: "3000",
+      });
+      navigate("/dashboard/postblog");
+    }
+    // Navigate or reset
+  };
+  const handleDraft = (e) => {
+    e.preventDefault();
+    console.log("Saving as draft:", formData);
+    // Save draft logic here
+  };
   return (
     <>
-      <h1 className="text-center mt-5 mb-5">Post your blog!</h1>
-      <div
-        className="mb-5 p-5"
-        style={{ width: "80%", margin: "0 auto", backgroundColor: "#fcfcfc", borderRadius: "1rem", border: "1px solid lightgrey"}}
-      >
-        <form action="">
-          <h3>Blog Title</h3>
-          <input className="blog-inputs" type="text" placeholder="Sunstrokes, a man's worst nightmare....."/>
-          <h3 className="mt-4">Blog Summary</h3>
-          <input className="blog-inputs" type="text" placeholder="Write a good attractive invitation to your blog!"/>
-          <h3 className="mt-4">Blog Content</h3>
-          <textarea className="blog-ta" name="" id="" style={{width: "100%", height: "300px", borderRadius: "0.5rem", padding: "1rem"}} placeholder="Today, we talk about..."></textarea>
-        <div className="btn-holder-div mt-4 mb-4" style={{width: "100%", display: "flex", justifyContent: "center"}}>
-        <Link to={""}><button className="btn btn-primary" style={{width: "250px"}}>Post</button></Link>
-        </div>
+      <h1 className="text-center mt-5">Post your blog!</h1>
+      <div className="p-3" style={{ width: "80%", margin: "0 auto" }}>
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="title">Title</label>
+          <input
+            className="blog-inputs mt-3 mb-3"
+            name="title"
+            type="text"
+            value={formData.title}
+            onChange={handleChange}
+            placeholder="Blog title"
+          />
+
+          <label htmlFor="summary">Summary</label>
+          <input
+            className="blog-inputs mt-3 mb-3"
+            name="summary"
+            type="text"
+            value={formData.summary}
+            onChange={handleChange}
+            placeholder="Blog summary"
+          />
+
+          <label htmlFor="content">Content</label>
+          <textarea
+            className="blog-ta mt-3 mb-3"
+            name="content"
+            value={formData.content}
+            onChange={handleChange}
+            style={{
+              width: "100%",
+              height: "300px",
+              padding: "1rem",
+            }}
+            placeholder="Write your blog content here..."
+          ></textarea>
+
+          <label htmlFor="photo" className="mb-3">
+            Images (Minimum Three Required)
+          </label>
+          <input
+            type="file"
+            name="photo"
+            accept="image/*"
+            multiple
+            onChange={handleFileChange}
+            style={{ border: "none", outline: "none" }}
+          />
+
+          <div
+            className="btn-holder-div mt-4 mb-4 justify-content-evenly"
+            style={{
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <button
+              className="btn btn-primary"
+              type="submit"
+              style={{ width: "200px", borderRadius: "0px" }}
+            >
+              Post
+            </button>
+            <button
+              className="btn btn-primary"
+              onClick={handleDraft}
+              style={{ width: "300px", borderRadius: "0px" }}
+            >
+              Save as Draft
+            </button>
+          </div>
         </form>
       </div>
     </>
