@@ -38,9 +38,9 @@ function Footer() {
                     Shweta Shimpi&nbsp;&nbsp;&nbsp;
                     <a style={{color: "white", textDecoration: "none"}} href="https://www.linkedin.com/in/shweta-shimpi-984726286/"><i class="fa-brands fa-linkedin"></i></a>&nbsp;&nbsp;&nbsp;
                     <a style={{color: "white", textDecoration: "none"}} href="https://github.com/30shwetashimpi"><i class="fa-brands fa-github"></i></a><br/>
-                    Aarya Walve&nbsp;&nbsp;&nbsp;
-                    <a style={{color: "white", textDecoration: "none"}} href="https://www.linkedin.com/in/aarya-walve-10259325b/"><i class="fa-brands fa-linkedin"></i></a>&nbsp;&nbsp;&nbsp;
-                    <a style={{color: "white", textDecoration: "none"}} href="https://github.com/aaryaa28"><i class="fa-brands fa-github"></i></a>
+                    Sakshi Nikum&nbsp;&nbsp;&nbsp;
+                    <a style={{color: "white", textDecoration: "none"}} href="https://www.linkedin.com/in/sakshi-nikum-57b2b0284/"><i class="fa-brands fa-linkedin"></i></a>&nbsp;&nbsp;&nbsp;
+                    <a style={{color: "white", textDecoration: "none"}} href="https://github.com/sakshinikum"><i class="fa-brands fa-github"></i></a>
                 </p>
             </div>
             <div className="col ms-5">

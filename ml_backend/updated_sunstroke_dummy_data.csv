@@ -1,0 +1,81 @@
+temperature,humidity,uv_index,sweating_level,spf_level,skin_type,time_outside,water_intake,activity_level,heatstroke_risk,sunburn_severity,hydration_status
+20,88,High (6-7),Heavy Sweating (75%),No Sunscreen (0 SPF),"Type 4: Olive, Rarely Burns",51,Good (2L-3L),Running,High,8.2,Well Hydrated
+32,37,Extreme (11+),No Sweating (0%),SPF 30,"Type 2: Fair, Burns Easily",33,Very Low (<500ml),Resting,Moderate,1.3,Severely Dehydrated
+22,82,Very High (8-10),Excessive (100%),No Sunscreen (0 SPF),"Type 3: Medium, Sometimes Burns",63,Moderate (1L-2L),Walking,Moderate,6.9,Well Hydrated
+41,41,Very High (8-10),No Sweating (0%),No Sunscreen (0 SPF),"Type 2: Fair, Burns Easily",30,Moderate (1L-2L),Running,High,4.7,Well Hydrated
+36,64,High (6-7),Heavy Sweating (75%),SPF 15,"Type 6: Dark Brown/Black, Highly UV Resistant",79,Low (500ml-1L),Running,High,3,Severely Dehydrated
+35,46,High (6-7),Mild (25%),SPF 30,"Type 5: Brown, Never Burns",48,Good (2L-3L),Walking,Low,4.9,Mildly Dehydrated
+38,84,High (6-7),Excessive (100%),SPF 30,"Type 4: Olive, Rarely Burns",72,Moderate (1L-2L),Walking,Low,9.6,Severely Dehydrated
+29,52,Moderate (3-5),Excessive (100%),SPF 15,"Type 3: Medium, Sometimes Burns",56,Low (500ml-1L),Resting,Low,0.9,Severely Dehydrated
+21,45,High (6-7),Excessive (100%),SPF 15,"Type 1: Very Fair, Always Burns",46,Very Low (<500ml),Resting,High,3.7,Well Hydrated
+25,65,Moderate (3-5),Moderate (50%),SPF 50+,"Type 4: Olive, Rarely Burns",14,Excellent (>3L),Running,Low,6.3,Well Hydrated
+20,68,Extreme (11+),Mild (25%),SPF 15,"Type 4: Olive, Rarely Burns",57,Low (500ml-1L),Running,Moderate,6.5,Well Hydrated
+21,56,High (6-7),Moderate (50%),SPF 15,"Type 1: Very Fair, Always Burns",22,Low (500ml-1L),Resting,High,7.4,Severely Dehydrated
+28,70,High (6-7),Mild (25%),No Sunscreen (0 SPF),"Type 4: Olive, Rarely Burns",23,Very Low (<500ml),Running,High,0.5,Mildly Dehydrated
+36,41,High (6-7),No Sweating (0%),SPF 15,"Type 2: Fair, Burns Easily",99,Moderate (1L-2L),Running,High,1.9,Well Hydrated
+38,62,Very High (8-10),Mild (25%),SPF 30,"Type 1: Very Fair, Always Burns",115,Excellent (>3L),Running,High,4.6,Mildly Dehydrated
+43,49,Very High (8-10),Mild (25%),SPF 15,"Type 1: Very Fair, Always Burns",35,Moderate (1L-2L),Running,High,1.6,Severely Dehydrated
+36,36,High (6-7),Mild (25%),SPF 15,"Type 5: Brown, Never Burns",56,Very Low (<500ml),Running,Moderate,1.1,Severely Dehydrated
+22,37,Low (1-2),No Sweating (0%),SPF 50+,"Type 5: Brown, Never Burns",98,Low (500ml-1L),Resting,High,9.6,Mildly Dehydrated
+43,46,Extreme (11+),Moderate (50%),SPF 50+,"Type 3: Medium, Sometimes Burns",46,Low (500ml-1L),Running,Moderate,0.6,Severely Dehydrated
+43,61,Moderate (3-5),No Sweating (0%),SPF 15,"Type 1: Very Fair, Always Burns",69,Moderate (1L-2L),Running,Moderate,6.8,Mildly Dehydrated
+25,67,Very High (8-10),No Sweating (0%),SPF 15,"Type 1: Very Fair, Always Burns",78,Excellent (>3L),Walking,Low,2.6,Mildly Dehydrated
+37,54,Low (1-2),Excessive (100%),No Sunscreen (0 SPF),"Type 6: Dark Brown/Black, Highly UV Resistant",97,Excellent (>3L),Resting,Low,0.6,Well Hydrated
+23,67,Low (1-2),Moderate (50%),No Sunscreen (0 SPF),"Type 4: Olive, Rarely Burns",74,Excellent (>3L),Resting,Moderate,2.2,Mildly Dehydrated
+29,79,Moderate (3-5),No Sweating (0%),SPF 15,"Type 4: Olive, Rarely Burns",17,Very Low (<500ml),Resting,Moderate,4.8,Mildly Dehydrated
+44,32,Very High (8-10),Excessive (100%),No Sunscreen (0 SPF),"Type 3: Medium, Sometimes Burns",52,Good (2L-3L),Resting,Moderate,6.1,Severely Dehydrated
+28,66,Extreme (11+),Excessive (100%),SPF 15,"Type 5: Brown, Never Burns",41,Good (2L-3L),Walking,Moderate,4.3,Severely Dehydrated
+43,54,Moderate (3-5),Heavy Sweating (75%),SPF 30,"Type 4: Olive, Rarely Burns",89,Good (2L-3L),Walking,High,6.4,Well Hydrated
+36,90,Extreme (11+),Moderate (50%),No Sunscreen (0 SPF),"Type 5: Brown, Never Burns",10,Excellent (>3L),Running,Low,4.2,Severely Dehydrated
+38,74,Very High (8-10),No Sweating (0%),SPF 50+,"Type 5: Brown, Never Burns",85,Good (2L-3L),Walking,Moderate,9.2,Severely Dehydrated
+42,66,High (6-7),Mild (25%),No Sunscreen (0 SPF),"Type 6: Dark Brown/Black, Highly UV Resistant",60,Moderate (1L-2L),Running,Low,8.8,Severely Dehydrated
+26,49,Low (1-2),Heavy Sweating (75%),SPF 30,"Type 5: Brown, Never Burns",35,Excellent (>3L),Running,High,9.9,Well Hydrated
+25,90,Very High (8-10),Heavy Sweating (75%),No Sunscreen (0 SPF),"Type 1: Very Fair, Always Burns",19,Excellent (>3L),Running,Moderate,3.6,Well Hydrated
+26,52,Extreme (11+),Heavy Sweating (75%),SPF 15,"Type 2: Fair, Burns Easily",57,Excellent (>3L),Running,Low,0.5,Well Hydrated
+23,38,Moderate (3-5),Moderate (50%),SPF 50+,"Type 2: Fair, Burns Easily",22,Moderate (1L-2L),Resting,Low,4.6,Mildly Dehydrated
+33,41,High (6-7),No Sweating (0%),SPF 50+,"Type 4: Olive, Rarely Burns",55,Low (500ml-1L),Resting,High,4,Severely Dehydrated
+39,64,Extreme (11+),Mild (25%),SPF 30,"Type 4: Olive, Rarely Burns",100,Low (500ml-1L),Resting,Moderate,7.7,Severely Dehydrated
+22,61,Extreme (11+),Moderate (50%),SPF 30,"Type 3: Medium, Sometimes Burns",54,Very Low (<500ml),Resting,Moderate,6,Well Hydrated
+34,58,Moderate (3-5),Moderate (50%),SPF 30,"Type 1: Very Fair, Always Burns",40,Good (2L-3L),Running,Low,7,Severely Dehydrated
+34,55,Moderate (3-5),Excessive (100%),SPF 50+,"Type 1: Very Fair, Always Burns",81,Excellent (>3L),Running,Moderate,6,Well Hydrated
+44,77,Very High (8-10),Mild (25%),No Sunscreen (0 SPF),"Type 5: Brown, Never Burns",54,Low (500ml-1L),Running,Low,7.3,Severely Dehydrated
+44,43,Extreme (11+),Moderate (50%),SPF 30,"Type 4: Olive, Rarely Burns",120,Excellent (>3L),Running,Low,7.3,Mildly Dehydrated
+45,35,Moderate (3-5),Heavy Sweating (75%),SPF 50+,"Type 5: Brown, Never Burns",14,Good (2L-3L),Running,Moderate,4.4,Well Hydrated
+39,51,Low (1-2),Moderate (50%),SPF 50+,"Type 2: Fair, Burns Easily",37,Excellent (>3L),Running,Moderate,8.8,Well Hydrated
+45,55,Very High (8-10),Moderate (50%),SPF 15,"Type 1: Very Fair, Always Burns",68,Moderate (1L-2L),Running,Low,1.5,Mildly Dehydrated
+35,38,Very High (8-10),Excessive (100%),No Sunscreen (0 SPF),"Type 5: Brown, Never Burns",43,Moderate (1L-2L),Resting,Low,9.1,Severely Dehydrated
+35,77,Low (1-2),Mild (25%),SPF 30,"Type 5: Brown, Never Burns",66,Very Low (<500ml),Walking,Low,1,Well Hydrated
+44,87,High (6-7),Moderate (50%),No Sunscreen (0 SPF),"Type 6: Dark Brown/Black, Highly UV Resistant",21,Moderate (1L-2L),Running,Moderate,1,Mildly Dehydrated
+30,87,Low (1-2),Heavy Sweating (75%),SPF 30,"Type 4: Olive, Rarely Burns",72,Very Low (<500ml),Running,Moderate,2.4,Mildly Dehydrated
+33,41,High (6-7),No Sweating (0%),SPF 50+,"Type 5: Brown, Never Burns",118,Moderate (1L-2L),Walking,High,2.6,Mildly Dehydrated
+45,72,Low (1-2),Excessive (100%),No Sunscreen (0 SPF),"Type 6: Dark Brown/Black, Highly UV Resistant",41,Very Low (<500ml),Walking,Low,8.7,Severely Dehydrated
+40,64,Extreme (11+),Heavy Sweating (75%),SPF 50+,"Type 5: Brown, Never Burns",115,Moderate (1L-2L),Walking,Moderate,3,Mildly Dehydrated
+26,51,High (6-7),Excessive (100%),SPF 15,"Type 1: Very Fair, Always Burns",32,Moderate (1L-2L),Running,Low,2,Mildly Dehydrated
+38,48,Extreme (11+),Excessive (100%),SPF 30,"Type 5: Brown, Never Burns",81,Very Low (<500ml),Resting,Low,6.6,Severely Dehydrated
+30,73,High (6-7),Excessive (100%),SPF 30,"Type 1: Very Fair, Always Burns",69,Moderate (1L-2L),Resting,Moderate,3.8,Well Hydrated
+37,57,High (6-7),Heavy Sweating (75%),SPF 30,"Type 1: Very Fair, Always Burns",106,Moderate (1L-2L),Resting,High,6.5,Severely Dehydrated
+27,35,Moderate (3-5),Mild (25%),SPF 50+,"Type 5: Brown, Never Burns",58,Very Low (<500ml),Running,Moderate,2.2,Well Hydrated
+29,47,Extreme (11+),Heavy Sweating (75%),SPF 50+,"Type 2: Fair, Burns Easily",86,Moderate (1L-2L),Running,High,3.9,Severely Dehydrated
+23,76,Very High (8-10),Moderate (50%),SPF 50+,"Type 6: Dark Brown/Black, Highly UV Resistant",105,Low (500ml-1L),Resting,Low,3.5,Well Hydrated
+42,49,Extreme (11+),Heavy Sweating (75%),SPF 50+,"Type 3: Medium, Sometimes Burns",90,Moderate (1L-2L),Walking,Low,2.2,Well Hydrated
+36,34,Very High (8-10),Mild (25%),SPF 15,"Type 4: Olive, Rarely Burns",51,Excellent (>3L),Running,Moderate,1.9,Well Hydrated
+42,31,Very High (8-10),No Sweating (0%),SPF 30,"Type 4: Olive, Rarely Burns",77,Very Low (<500ml),Resting,High,1.3,Well Hydrated
+26,86,Extreme (11+),Heavy Sweating (75%),SPF 50+,"Type 1: Very Fair, Always Burns",105,Moderate (1L-2L),Walking,High,3.5,Mildly Dehydrated
+25,34,Low (1-2),No Sweating (0%),SPF 50+,"Type 3: Medium, Sometimes Burns",57,Moderate (1L-2L),Walking,Moderate,1.1,Mildly Dehydrated
+39,76,Very High (8-10),Moderate (50%),SPF 30,"Type 4: Olive, Rarely Burns",37,Moderate (1L-2L),Resting,Low,7.9,Severely Dehydrated
+38,79,Extreme (11+),No Sweating (0%),SPF 30,"Type 6: Dark Brown/Black, Highly UV Resistant",106,Good (2L-3L),Resting,High,4.9,Well Hydrated
+26,59,Low (1-2),No Sweating (0%),SPF 30,"Type 5: Brown, Never Burns",112,Very Low (<500ml),Running,High,3.2,Severely Dehydrated
+39,81,Moderate (3-5),Heavy Sweating (75%),No Sunscreen (0 SPF),"Type 6: Dark Brown/Black, Highly UV Resistant",40,Excellent (>3L),Running,Low,7.3,Mildly Dehydrated
+21,49,Extreme (11+),Moderate (50%),SPF 15,"Type 3: Medium, Sometimes Burns",42,Good (2L-3L),Running,Low,6.1,Well Hydrated
+31,78,Moderate (3-5),No Sweating (0%),SPF 15,"Type 2: Fair, Burns Easily",16,Moderate (1L-2L),Running,Low,6.2,Well Hydrated
+40,68,Low (1-2),Excessive (100%),SPF 50+,"Type 6: Dark Brown/Black, Highly UV Resistant",28,Very Low (<500ml),Walking,Moderate,6.6,Mildly Dehydrated
+21,74,High (6-7),Excessive (100%),SPF 30,"Type 1: Very Fair, Always Burns",81,Excellent (>3L),Resting,Low,5,Well Hydrated
+31,33,Moderate (3-5),No Sweating (0%),SPF 30,"Type 2: Fair, Burns Easily",88,Excellent (>3L),Running,High,3.5,Well Hydrated
+41,56,Moderate (3-5),Mild (25%),SPF 15,"Type 5: Brown, Never Burns",79,Good (2L-3L),Resting,Low,9,Well Hydrated
+21,44,Very High (8-10),No Sweating (0%),SPF 30,"Type 3: Medium, Sometimes Burns",76,Excellent (>3L),Walking,High,9.1,Mildly Dehydrated
+39,72,Moderate (3-5),Moderate (50%),No Sunscreen (0 SPF),"Type 6: Dark Brown/Black, Highly UV Resistant",59,Very Low (<500ml),Walking,High,9.4,Severely Dehydrated
+44,67,High (6-7),No Sweating (0%),No Sunscreen (0 SPF),"Type 5: Brown, Never Burns",95,Excellent (>3L),Running,Moderate,8,Severely Dehydrated
+36,60,Moderate (3-5),Moderate (50%),No Sunscreen (0 SPF),"Type 6: Dark Brown/Black, Highly UV Resistant",67,Low (500ml-1L),Resting,Moderate,6.3,Severely Dehydrated
+42,77,Moderate (3-5),Excessive (100%),SPF 15,"Type 6: Dark Brown/Black, Highly UV Resistant",93,Low (500ml-1L),Running,Moderate,5.8,Severely Dehydrated
+41,84,Very High (8-10),Excessive (100%),SPF 15,"Type 4: Olive, Rarely Burns",90,Good (2L-3L),Walking,High,6.2,Mildly Dehydrated
+27,56,High (6-7),Mild (25%),SPF 50+,"Type 4: Olive, Rarely Burns",50,Very Low (<500ml),Resting,High,2.9,Well Hydrated

@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
 import axios from "axios";
 
 import "./PostABlog.css";
@@ -43,7 +44,8 @@ function PostABlog() {
         navigate("/dashboard/postblog"); // replace with actual route
       }
     } catch (e) {
-      toast.error("Error logging user in!", {
+      console.log(e);
+      toast.error("Error posting blog!", {
         position: "top-right",
         autoClose: "3000",
       });

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sun Exposure Risk Prediction</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: lemonchiffon; }
+        h1 { color: orange; background: black; border-radius: 20px; width: 500px; text-align: center; padding: 10px; }
+        .container { max-width: 600px; margin: auto; }
+        .radio-group { margin-bottom: 10px; }
+        .result-box { margin-top: 20px; padding: 10px; background: white; border: 1px solid black; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Enter Your Details</h1>
+    </center>
+    <div class="container">
+        <form action="/predict" method="post">
+            <label>Temperature (°C):</label>
+            <input type="number" step="0.1" name="temperature" required><br><br>
+            
+            <label>Humidity (%):</label>
+            <input type="number" step="0.1" name="humidity" required><br><br>
+            
+            <div class="radio-group">
+                <label>UV Index:</label><br>
+                <input type="radio" name="uv_index" value="Low" required> Low
+                <input type="radio" name="uv_index" value="Moderate"> Moderate
+                <input type="radio" name="uv_index" value="High"> High
+            </div>
+            
+            <div class="radio-group">
+                <label>Sweating Level:</label><br>
+                <input type="radio" name="sweating_level" value="No Sweating" required> No Sweating
+                <input type="radio" name="sweating_level" value="Moderate"> Moderate
+                <input type="radio" name="sweating_level" value="Heavy"> Heavy
+            </div>
+            
+            <div class="radio-group">
+                <label>SPF Level:</label><br>
+                <input type="radio" name="spf_level" value="SPF 15" required> SPF 15
+                <input type="radio" name="spf_level" value="SPF 30"> SPF 30
+                <input type="radio" name="spf_level" value="SPF 50"> SPF 50
+            </div>
+            
+            <div class="radio-group">
+                <label>Skin Type:</label><br>
+                <input type="radio" name="skin_type" value="Type 1" required> Type 1
+                <input type="radio" name="skin_type" value="Type 2"> Type 2
+                <input type="radio" name="skin_type" value="Type 3"> Type 3
+            </div>
+            
+            <div class="radio-group">
+                <label>Water Intake:</label><br>
+                <input type="radio" name="water_intake" value="Less than 500ml" required> Less than 500ml
+                <input type="radio" name="water_intake" value="1L - 2L"> 1L - 2L
+                <input type="radio" name="water_intake" value="More than 2L"> More than 2L
+            </div>
+            
+            <div class="radio-group">
+                <label>Activity Level:</label><br>
+                <input type="radio" name="activity_level" value="Walking" required> Walking
+                <input type="radio" name="activity_level" value="Running"> Running
+                <input type="radio" name="activity_level" value="High Intensity"> High Intensity
+            </div>
+            
+            <button type="submit">Predict</button>
+        </form>
+
+        <!-- Display Predictions -->
+        {% if prediction %}
+        <div class="result-box">
+            <h3>Prediction Results:</h3>
+            <p><strong>Heatstroke Risk:</strong> {{ prediction.heatstroke_risk }}</p>
+            <p><strong>Sunburn Severity:</strong> {{ prediction.sunburn_severity }}</p>
+            <p><strong>Hydration Status:</strong> {{ prediction.hydration_status }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
