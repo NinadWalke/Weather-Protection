@@ -36,14 +36,14 @@ function Blogs() {
             blogImage = "/media/errorcardimg.jpg", 
             blogTitle = "Default Title", 
             blogSummary = "Default Summary"} */}
-        <Link to={"/dashboard/blogs/123"}>
+        <Link to={"/dashboard/blogs/100"}>
           <BlogCard
             blogImage="/media/sunstrokeblog1.jpg"
             blogTitle="Home Remedies for Sun Strokes"
             blogSummary="We have launched various home remedies to counter sun strokes, which will eventually help you to safeguard your well being."
           />
         </Link>
-        <Link to={"/dashboard/blogs/124"}>
+        <Link to={"/dashboard/blogs/101"}>
           <BlogCard
             blogImage="/media/stormblog1.jpg"
             blogTitle="Stay Safe During Stormy Winds"
@@ -51,7 +51,7 @@ function Blogs() {
           />
         </Link>
 
-        <Link to={"/dashboard/blogs/125"}>
+        <Link to={"/dashboard/blogs/102"}>
           <BlogCard
             blogImage="/media/weathercareblog1.jpg"
             blogTitle="Daily Care from Weather Anomalies"

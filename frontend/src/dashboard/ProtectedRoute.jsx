@@ -7,7 +7,7 @@ export default function ProtectedRoute({ children }) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get("http://localhost:8080/auth/check", { withCredentials: true })
+    axios.post("http://localhost:8080/auth", null, { withCredentials: true })
       .then(res => {
         if (!res.data.authenticated) {
           navigate("/login");

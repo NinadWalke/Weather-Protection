@@ -3,6 +3,8 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import {BrowserRouter, Routes, Route, useLocation} from "react-router-dom";
 
+import Test from './Test.jsx';
+
 // Common/Redundant Imports 
 import Navbar from "./landing_page/Navbar.jsx";
 import Footer from "./landing_page/Footer.jsx";
@@ -62,7 +64,7 @@ const Main = () => {
         <Route path='/dashboard/blogs' element={<Blogs />} />
         <Route path='/dashboard/postblog' element={<PostABlog/>}/>
         <Route path='/dashboard/blogs/:id' element={<ShowBlog/>}/>
-
+        <Route path='/auth' element={<ProtectedRoute><Test/></ProtectedRoute>}/>
         {/* Not found route */}
         <Route path='*' element={<NotFound/>}></Route>
       </Routes>

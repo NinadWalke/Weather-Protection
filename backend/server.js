@@ -103,20 +103,23 @@ app.post("/login", async (req, res) => {
           .json({ message: "Invalid username or password" });
       }
       req.login(user, (err) => {
-        if(err) {
+        if (err) {
           console.error("Login session error: ", err);
-          return res.status(500).json({message: "Could not login user!"});
+          return res.status(500).json({ message: "Could not login user!" });
         }
-        // Successful login
+        console.log("✅ Login successful");
+        console.log("✅ Session after login:", req.session);
         res.status(200).json({ message: "Login successful!", user });
-      })
+      });
     }
   );
 });
 
 // Authentication at each page
-app.get("/auth/check", async (req, res) => {
-  console.log(req.user);
+app.post("/auth", async (req, res) => {
+  console.log("🔍 Session:", req.session);
+  console.log("🔍 req.user:", req.user);
+  console.log("🔍 req.session.passport:", req.session?.passport);
   if (req.isAuthenticated()) {
     res.status(200).json({ authenticated: true, user: req.user });
   } else {

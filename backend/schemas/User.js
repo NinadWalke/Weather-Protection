@@ -1,7 +1,6 @@
 const { default: mongoose } = require('mongoose');
-const mognoose = require('mongoose');
 const passportLocalMongoose = require('passport-local-mongoose');
-const Schema = mognoose.Schema;
+const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
     firstname: {
