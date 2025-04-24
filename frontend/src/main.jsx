@@ -7,6 +7,7 @@ import {BrowserRouter, Routes, Route, useLocation} from "react-router-dom";
 import Navbar from "./landing_page/Navbar.jsx";
 import Footer from "./landing_page/Footer.jsx";
 import {ToastContainer} from 'react-toastify';
+import ProtectedRoute from './dashboard/ProtectedRoute.jsx';
 
 // Landing Page Imports
 import AboutUsPage from './landing_page/about_us/AboutUsPage.jsx';

@@ -48,7 +48,7 @@ const app = express();
 const port = 8080;
 
 // Server settings here
-app.use(cors());
+// app.use(cors());
 app.use(
   cors({
     origin: "http://localhost:5173", // frontend origin
@@ -101,17 +101,32 @@ app.post("/login", async (req, res) => {
           .status(401)
           .json({ message: "Invalid username or password" });
       }
-
-      // Successful login
-      res.status(200).json({ message: "Login successful!", user });
+      req.login(user, (err) => {
+        if(err) {
+          console.error("Login session error: ", err);
+          return res.status(500).json({message: "Could not login user!"});
+        }
+        // Successful login
+        res.status(200).json({ message: "Login successful!", user });
+      })
     }
   );
 });
 
+// Authentication at each page
+app.get("/auth/check", async (req, res) => {
+  console.log(req.user);
+  if (req.isAuthenticated()) {
+    res.status(200).json({ authenticated: true, user: req.user });
+  } else {
+    res.status(401).json({ authenticated: false });
+  }
+});
+
 // Blogs route
 app.post("/blog/post", async (req, res) => {
-  if(req.isAuthenticated()) {
-    console.log("Authenticated");
+  if(!req.isAuthenticated()) {
+    return res.status(401).json({ error: "Not authenticated" });
   }
   const user = req.user;
   console.log(user);
