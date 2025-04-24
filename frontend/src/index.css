@@ -5,3 +5,17 @@
 a {
     text-decoration: none;
 }
+
+.site-btn-1 {
+    width: 150px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border: none;
+    outline :none;
+    transition-duration: 0.4s;
+}
+
+.site-btn-1:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}

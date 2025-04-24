@@ -1,14 +1,86 @@
-
-.blog-inputs {
-    width: 100%;
-    height: 35px;
-}
-
-.blog-ta {
-    border: 1px solid lightgrey;
+.blog-form-title {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+  }
+  
+  .blog-form-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: #fdfdfd;
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+  }
+  
+  .blog-form .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
+  
+  .blog-form label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #34495e;
+  }
+  
+  .blog-form input[type="text"],
+  .blog-form textarea,
+  .blog-form input[type="file"] {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #fff;
+    transition: border 0.3s ease;
+  }
+  
+  .blog-form input[type="text"]:focus,
+  .blog-form textarea:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  .blog-form textarea {
+    height: 250px;
     resize: none;
-}
-
-.blog-ta:hover {
-    border: 1px solid rgb(50, 173, 255);
-}
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .submit-btn,
+  .draft-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn {
+    background-color: #007bff;
+  }
+  
+  .submit-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .draft-btn {
+    background-color: #6c757d;
+  }
+  
+  .draft-btn:hover {
+    background-color: #545b62;
+  }
+  

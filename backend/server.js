@@ -55,6 +55,7 @@ app.use(
     credentials: true, // 👈 Allow cookies to be sent
   })
 );
+app.options("*", cors());
 app.use(bodyParser.json()); // Since we're working with JSON, bodyParser.json
 app.use(session(sessionOptions)); // Using sessions
 app.use(passport.initialize());
