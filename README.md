@@ -14,9 +14,8 @@ This repository contains a responsive web application designed to detect and hel
 ## 🛠️ Technology Stack
 
 - **Frontend:** React.js
-- **Backend:** Express.js
+- **Backend:** Express.js, Node.js
 - **Database:** MongoDB
-- **Responsive Design:** The application is fully responsive and works seamlessly across different devices.
 
 ## 🚀 Installation
 
